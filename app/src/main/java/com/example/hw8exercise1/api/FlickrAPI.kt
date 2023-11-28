@@ -13,7 +13,9 @@ interface FlickrAPI {
 
 
 
-//FLickr Get statement
+//Flickr Get Statement
+
+
     @GET(
         "services/rest/?method=flickr.interestingness.getList" +
                 "&api_key=$API_KEY" +
@@ -27,6 +29,8 @@ interface FlickrAPI {
 
     // suspend fun fetchContents(): String
     suspend fun fetchPhotos(): FlickrResponse
+
+
 
 
 

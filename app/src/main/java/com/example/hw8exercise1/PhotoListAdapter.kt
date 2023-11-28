@@ -17,6 +17,7 @@ class PhotoViewHolder(
 ) : RecyclerView.ViewHolder(binding.root) {
     fun bind(galleryItem: GalleryItem) {
 
+
         binding.itemImageView.load(galleryItem.url)
 
         binding.root.setOnClickListener {

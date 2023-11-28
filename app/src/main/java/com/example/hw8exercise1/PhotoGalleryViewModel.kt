@@ -17,8 +17,10 @@ import javax.inject.Inject
 
 private const val TAG = "PhotoGalleryViewModel"
 
-class PhotoGalleryViewModel: ViewModel() {
 
+//PhotoGalleryViewModel function that needs to work
+
+class PhotoGalleryViewModel: ViewModel() {
 
         private val flickrApi: FlickrAPI = Retrofit.Builder()
             .baseUrl("https://api.flickr.com/")
@@ -26,11 +28,15 @@ class PhotoGalleryViewModel: ViewModel() {
             .build()
             .create(FlickrAPI::class.java)
 
-    fun getPhotos(): Flow<PagingData<GalleryItem>> {
-        return Pager(
-            config = PagingConfig(pageSize = 20, enablePlaceholders = false),
-            pagingSourceFactory = { PhotoPagingSource(flickrApi) }
-        ).flow
-    }
+        fun getPhotos(): Flow<PagingData<GalleryItem>> {
+           return Pager(
+                config = PagingConfig(
+                    pageSize = 100,
+                    enablePlaceholders = false
+                ),
+                pagingSourceFactory = { PhotoRepository.PhotoPagingSource(flickrApi) }
+            ).flow
 
-    }
+        }
+}
+

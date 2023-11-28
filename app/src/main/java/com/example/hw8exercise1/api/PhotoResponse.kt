@@ -7,3 +7,4 @@ import com.squareup.moshi.JsonClass
 data class PhotoResponse(
     @Json(name = "photo") val galleryItems: List<GalleryItem>
 )
+
