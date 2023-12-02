@@ -10,10 +10,7 @@ import retrofit2.converter.moshi.MoshiConverterFactory
 import retrofit2.create
 
 
-//PhotoRepository function that needs to work
 class PhotoRepository(private val flickrApi: FlickrAPI) {
-
-
 
 
 class PhotoPagingSource(private val flickrApi: FlickrAPI) : PagingSource<Int, GalleryItem>() {

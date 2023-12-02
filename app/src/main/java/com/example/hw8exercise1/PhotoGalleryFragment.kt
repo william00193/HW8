@@ -25,7 +25,6 @@ import kotlinx.coroutines.launch
 private const val TAG = "PhotoGalleryFragment"
 
 
-
 class PhotoGalleryFragment : Fragment() {
 
     private var _binding: FragmentPhotoGalleryBinding? = null

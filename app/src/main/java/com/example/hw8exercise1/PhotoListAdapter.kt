@@ -12,13 +12,6 @@ import com.example.hw8exercise1.api.GalleryItem
 import com.example.hw8exercise1.databinding.ListItemGalleryBinding
 import java.util.*
 
-//class CrimeListAdapter(
-//    private val crimes: List<Crime>,
-//    private val onCrimeClicked:(crimeId: UUID)-> Unit): RecyclerView.Adapter<CrimeHolder>() {
-//    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): CrimeHolder {
-//        val inflater = LayoutInflater.from(parent.context)
-//        val binding = ListItemCrimeBinding.inflate(inflater, parent, false)
-//        return CrimeHolder(binding)
 
 
 

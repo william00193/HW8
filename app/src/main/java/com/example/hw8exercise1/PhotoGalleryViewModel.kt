@@ -18,7 +18,6 @@ import javax.inject.Inject
 private const val TAG = "PhotoGalleryViewModel"
 
 
-//PhotoGalleryViewModel function that needs to work
 
 class PhotoGalleryViewModel: ViewModel() {
 

@@ -12,6 +12,7 @@ private const val API_KEY = "38966820aba3820d74f6b3121335fe3d"
 interface FlickrAPI {
 
 
+
     @GET(
         "services/rest/?method=flickr.interestingness.getList" +
                 "&api_key=$API_KEY" +
