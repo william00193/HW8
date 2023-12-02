@@ -32,7 +32,7 @@ class PhotoGalleryViewModel: ViewModel() {
            return Pager(
                 config = PagingConfig(
                     pageSize = 100,
-                    enablePlaceholders = false
+                    enablePlaceholders = true
                 ),
                 pagingSourceFactory = { PhotoRepository.PhotoPagingSource(flickrApi) }
             ).flow

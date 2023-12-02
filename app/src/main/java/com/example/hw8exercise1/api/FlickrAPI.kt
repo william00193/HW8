@@ -20,7 +20,7 @@ interface FlickrAPI {
         "services/rest/?method=flickr.interestingness.getList" +
                 "&api_key=$API_KEY" +
                 "&format=json" +
-                "&page=2"+
+                "&page=3"+
                 "&per_page=100"+
                 "&nojsoncallback=1" +
                 "&extras=url_s"
