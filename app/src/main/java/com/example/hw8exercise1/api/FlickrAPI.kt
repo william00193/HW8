@@ -13,8 +13,6 @@ interface FlickrAPI {
 
 
 
-//Flickr Get Statement
-
 
     @GET(
         "services/rest/?method=flickr.interestingness.getList" +
