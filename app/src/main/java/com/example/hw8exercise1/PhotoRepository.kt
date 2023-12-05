@@ -11,7 +11,6 @@ import retrofit2.create
 
 class PhotoRepository(private val flickrApi: FlickrAPI) {
 
-
 class PhotoPagingSource(private val flickrApi: FlickrAPI) : PagingSource<Int, GalleryItem>() {
 
     override suspend fun load(params: LoadParams<Int>): LoadResult<Int, GalleryItem> {
