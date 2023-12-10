@@ -20,17 +20,14 @@ class PhotoViewHolder(
 ) : RecyclerView.ViewHolder(binding.root) {
     fun bind(galleryItem: GalleryItem) {
 
-
+//Loading the initial url's from Flickr into my recycler view
         binding.itemImageView.load(galleryItem.url)
 
+
+//My Onclick Listener that is going to send the data to the next activity
         binding.root.setOnClickListener {
 
-//            val intent = Intent(it.context, SecondActivity::class.java)
-//
-//            intent.putExtra("" ,galleryItem.url)
-//            intent.putExtra("", galleryItem.title)
-//
-//            it.context.startActivity(intent)
+
 
             Toast.makeText(
                 binding.root.context,

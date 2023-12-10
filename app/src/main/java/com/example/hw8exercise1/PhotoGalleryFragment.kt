@@ -25,6 +25,9 @@ import kotlinx.coroutines.launch
 private const val TAG = "PhotoGalleryFragment"
 
 
+//My PhotoGalleryFragment class that extends Fragment
+//This is the main class that is going to be used to display the photos
+//Most of this has stayed the same from the exercise #1
 class PhotoGalleryFragment : Fragment() {
 
     private var _binding: FragmentPhotoGalleryBinding? = null
@@ -42,10 +45,12 @@ class PhotoGalleryFragment : Fragment() {
         return binding.root
     }
 
+//The only thing that has changed here was the addition of submitData and pagingData
+//This is what is going to be used to get and display the photos with the paging 3 library
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
         val photoListAdapter = PhotoListAdapter { item ->
-            // Handle item click here if needed
+
         }
         binding.photoGrid.adapter = photoListAdapter
         viewLifecycleOwner.lifecycleScope.launch {
@@ -93,77 +98,3 @@ class PhotoGalleryFragment : Fragment() {
 }
 
 
-//
-//    //Page that needs to be fixed and edited for bugs
-//    class PhotoGalleryFragment : Fragment() {
-//
-//        private var _binding: FragmentPhotoGalleryBinding? = null
-//        private val binding get() = _binding!!
-//
-//        private val photoGalleryViewModel: PhotoGalleryViewModel by viewModels()
-//
-//        override fun onCreateView(
-//            inflater: LayoutInflater,
-//            container: ViewGroup?,
-//            savedInstanceState: Bundle?
-//        ): View {
-//            _binding = FragmentPhotoGalleryBinding.inflate(inflater, container, false)
-//            binding.photoGrid.layoutManager = GridLayoutManager(context, 3)
-//            return binding.root
-//        }
-//
-//
-//        override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-//            super.onViewCreated(view, savedInstanceState)
-//                val photoListAdapter = PhotoListAdapter { item ->
-//                    // Handle item click here if needed
-//                }
-//                binding.photoGrid.adapter = photoListAdapter
-//                viewLifecycleOwner.lifecycleScope.launch {
-//                    viewLifecycleOwner.repeatOnLifecycle(Lifecycle.State.STARTED) {
-//                        photoGalleryViewModel.getPhotos().collect { pagingData ->
-//                            photoListAdapter.submitData(pagingData)
-//                        }
-//                    }
-//                }
-//            }
-//
-//
-//            class PhotoListAdapter(
-//                private val submitData: (GalleryItem) -> Unit
-//            ) : RecyclerView.Adapter<PhotoViewHolder>() {
-//
-//                private var galleryItems: List<GalleryItem> = emptyList()
-//
-//                override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): PhotoViewHolder {
-//                    val inflater = LayoutInflater.from(parent.context)
-//                    val binding = ListItemGalleryBinding.inflate(inflater, parent, false)
-//                    return PhotoViewHolder(binding)
-//                }
-//
-//                override fun onBindViewHolder(holder: PhotoViewHolder, position: Int) {
-//                    val item = galleryItems[position]
-//                    holder.bind(item)
-//                    submitData(item)
-//                }
-//
-//                override fun getItemCount(): Int {
-//                    return galleryItems.size
-//                }
-//
-//                fun submitData(galleryItems: List<GalleryItem>) {
-//                    this.galleryItems = galleryItems
-//                    notifyDataSetChanged()
-//                }
-//
-//
-//            }
-//
-//        override fun onDestroyView() {
-//            super.onDestroyView()
-//            _binding = null
-//        }
-//    }
-//
-//
-//
