@@ -20,6 +20,7 @@ class PhotoViewHolder(
 ) : RecyclerView.ViewHolder(binding.root) {
     fun bind(galleryItem: GalleryItem) {
 
+
 //Loading the initial url's from Flickr into my recycler view
         binding.itemImageView.load(galleryItem.url)
 

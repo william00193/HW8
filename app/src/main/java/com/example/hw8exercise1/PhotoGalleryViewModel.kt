@@ -23,6 +23,7 @@ private const val TAG = "PhotoGalleryViewModel"
 //This part is in control of my pager and paging source
 class PhotoGalleryViewModel: ViewModel() {
 
+
         private val flickrApi: FlickrAPI = Retrofit.Builder()
 
 //Base Url for the API

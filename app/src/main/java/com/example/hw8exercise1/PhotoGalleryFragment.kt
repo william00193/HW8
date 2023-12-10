@@ -45,6 +45,7 @@ class PhotoGalleryFragment : Fragment() {
         return binding.root
     }
 
+
 //The only thing that has changed here was the addition of submitData and pagingData
 //This is what is going to be used to get and display the photos with the paging 3 library
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
